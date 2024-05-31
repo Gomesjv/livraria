@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "livraria",
     "rest_framework_simplejwt",
+    "usuario",
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,4 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 }
+AUTH_USER_MODEL = "usuario.Usuario"

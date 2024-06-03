@@ -13,6 +13,7 @@ dependencies = [
     "setuptools>=70.0.0",
     "python-magic>=0.4.27",
     "Pillow>=10.3.0",
+    "drf-spectacular>=0.27.2",
 ]
 requires-python = "==3.10.*"
 readme = "README.md"

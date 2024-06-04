@@ -2,6 +2,10 @@ from django.contrib import admin
 
 from .models import Categoria, Editora, Autor, Livro
 
+from livraria.models import Compra
+
+admin.site.register(Compra)
+
 @admin.register(Autor)
 class AutorAdmin(admin.ModelAdmin):
     list_display = ('nome', 'email')

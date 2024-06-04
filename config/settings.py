@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     "corsheaders",
     "livraria",
     "rest_framework_simplejwt",
-    "usuario",
     "uploader",
     "drf_spectacular",
+    "usuario",
 ]
 
 MIDDLEWARE = [

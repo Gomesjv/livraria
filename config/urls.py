@@ -31,6 +31,8 @@ from uploader.router import router as uploader_router
 from livraria.views import CategoriaViewSet, EditoraViewSet
 from usuario.router import router as usuario_router
 
+from livraria.views import UsuarioViewSet
+
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
@@ -40,6 +42,7 @@ from drf_spectacular.views import (
 router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
+router.register(r"usuarios", UsuarioViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

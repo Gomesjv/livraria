@@ -28,10 +28,8 @@ from django.conf.urls.static import static
 
 from uploader.router import router as uploader_router
 
-from livraria.views import CategoriaViewSet, EditoraViewSet
+from livraria.views import  AutorViewSet, CategoriaViewSet, CompraViewSet, EditoraViewSet, LivroViewSet, UsuarioViewSet
 from usuario.router import router as usuario_router
-
-from livraria.views import UsuarioViewSet
 
 from drf_spectacular.views import (
     SpectacularAPIView,
@@ -43,6 +41,9 @@ router = DefaultRouter()
 router.register(r"categorias", CategoriaViewSet)
 router.register(r"editoras", EditoraViewSet)
 router.register(r"usuarios", UsuarioViewSet)
+router.register(r"compras", CompraViewSet)
+router.register(r"autores", AutorViewSet)
+router.register(r"livros", LivroViewSet)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

@@ -70,6 +70,7 @@ class CriarEditarCompraSerializer(ModelSerializer):
 class ComprasSerializer(ModelSerializer):
     itens = ItensCompraSerializer(many=True)
     usuario = serializers.HiddenField(default=serializers.CurrentUserDefault())
+    data = serializers.DateTimeField(read_only=True)
 
     class Meta:
         model = Compra

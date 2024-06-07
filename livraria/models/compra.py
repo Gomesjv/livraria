@@ -9,9 +9,9 @@ class Compra(models.Model):
         REALIZADO = 2, "Realizado"
         PAGO = 3, "Pago"
         ENTREGUE = 4, "Entregue"
-
     usuario = models.ForeignKey(Usuario, on_delete=models.PROTECT, related_name="compras")
     status = models.IntegerField(choices=StatusCompra.choices,  default=StatusCompra.CARRINHO)
+    data = models.DateTimeField(auto_now_add=True)
 
 class ItensCompra(models.Model):
     compra = models.ForeignKey(Compra, on_delete=models.CASCADE, related_name="itens")
